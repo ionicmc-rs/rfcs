@@ -130,7 +130,7 @@ this feature would require changing:
 - the parser to allow non-strings after extern (first impl-method)
 - the compiler to allow custom ABIs. (specifically anything that stores its ABI).
 
-Also, creation of ABI that is invalid is considered undefined behaviour, hence the `unsafe` keyword. The exact defenition for an "Invalid ABI" is not clear, as certain ABIs may have different forms. Basic things to check include all alignment consts being powers of 2.
+Also, creation of ABI that is invalid is considered undefined behaviour, hence the `unsafe` keyword. The exact defenition for an "Invalid ABI" is not clear, as certain ABIs may have different forms. Basic things to check include all alignment consts being powers of 2. (Note: We still check what can be checked)
 
 Additionally, calling a "custom" function with an incorrect ABI is UB, and this applies to both the call and creation of the ABI.
 
